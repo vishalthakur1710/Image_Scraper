@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "image-keyword-downloader"
+version = "0.1.0"
+description = "Production-grade image downloading pipeline with API-first extraction and safe fallbacks."
+authors = ["OpenAI Codex <codex@openai.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+pillow = "^11.1.0"
+python-dotenv = "^1.0.1"
+playwright = {version = "^1.52.0", optional = true}
+beautifulsoup4 = "^4.14.3"
+
+[tool.poetry.extras]
+bing-fallback = ["playwright"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
